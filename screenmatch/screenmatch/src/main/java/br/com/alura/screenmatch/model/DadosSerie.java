@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true) // Estamos dizendo para o Jackson não tentar converter oque não foi mapeado, por padrão, vem false, setamos para true para não ocorrer essa tentativa
-// que trigga um erro chamado UnrecognizedPropertyException
+// que trigga uma exceção chamada UnrecognizedPropertyException
 
 public record DadosSerie(@JsonAlias("Title") String titulo, @JsonAlias("totalSeasons") Integer totalTemporadas, @JsonAlias("imdbRating") String avaliacao) {
 }
